@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: MainApp
+  datasource:
+    username: postgres
+    password: SomePwd67
+    url: jdbc:postgresql://localhost:5432/talentapp
+    driver-class-name: org.postgresql.Driver
+

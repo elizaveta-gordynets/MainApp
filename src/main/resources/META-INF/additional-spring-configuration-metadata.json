@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "spring.datasource.liquibase.change-log",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.liquibase.change-log."
+    },
+    {
+      "name": "application.auth.secretKey",
+      "type": "java.lang.String",
+      "description": "Description for application.auth.secretKey."
+    },
+    {
+      "name": "application.jwt.secretKey",
+      "type": "java.lang.String",
+      "description": "Description for application.jwt.secretKey."
+    }
+  ] }
