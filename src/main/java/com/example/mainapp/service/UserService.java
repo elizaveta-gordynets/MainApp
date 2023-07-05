@@ -2,6 +2,7 @@ package com.example.mainapp.service;
 
 import com.example.mainapp.dto.AuthRequest;
 import com.example.mainapp.dto.CustomUserDetails;
+import com.example.mainapp.dto.UserDto;
 import com.example.mainapp.entity.UserInfo;
 import com.example.mainapp.repository.UserInfoRepository;
 import com.example.mainapp.service.security.CustomUserDetailsService;
@@ -29,10 +30,13 @@ public class UserService {
         this.service = service;
     }
 
-    public void addUser(UserInfo userInfo) {
-        userInfo.setPassword(passwordEncoder.encode(userInfo.getPassword()));
+    public void addUser(UserDto user) {
+        UserInfo userInfo = new UserInfo();
+        userInfo.setPassword(passwordEncoder.encode(user.getPassword()));
         userInfo.setId(UUID.randomUUID().toString());
-        userInfo.setName(userInfo.getName());
+        userInfo.setUsername(user.getUsername());
+        userInfo.setName(user.getName());
+        userInfo.setEmail(user.getEmail());
         userInfoRepository.save(userInfo);
     }
 

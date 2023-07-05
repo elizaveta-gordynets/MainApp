@@ -1,6 +1,7 @@
 package com.example.mainapp.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,13 +15,15 @@ import java.time.LocalDate;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Vacancy {
 
     @Id
-    private Long id;
+    private String id;
     private String header;
     private String description;
     private LocalDate expirationDate;
     private String location;
     private LocalDate startDate;
+    private boolean isOutdated;
 }
